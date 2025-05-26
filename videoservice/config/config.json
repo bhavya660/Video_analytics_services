@@ -1,0 +1,29 @@
+{
+    "service_name": "video_service",
+    "architecture": "x86",
+    "gpu_enabled": false,
+    "gpu_memory_mb": 0,
+    "stream_settings": {
+      "resolution_width": 1280,
+      "resolution_height": 720,
+      "fps": 30,
+      "bitrate": 4000,
+      "source_type": "file",
+      "source_details": {
+        "location": "/files/sample.mp4"
+      },
+      "output_stream_type": "rtsp",
+      "output_url": "rtsp://ip:8554/stream",
+      "video_codec": "h264"
+    },
+    "model_config": {
+      "model_type": "Object_detection",
+      "model": "yolov3-tiny"
+    },
+    "network_settings": {
+      "port": 8554,
+      "bind_address": "0.0.0.0",
+      "tls_enabled": false
+    },
+    "hw_acceleration": "no"
+  }
