@@ -24,9 +24,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # set(CMAKE_CXX_STANDARD 11)
 
+include_directories(inc)
+
 # Add the executable and all source files
 add_executable(rest_service
     src/main.cpp
+    src/RestService.cpp
+    src/Logger.cpp
 )
 
 # Find and link the FastCGI library

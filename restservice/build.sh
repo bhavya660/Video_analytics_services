@@ -1,1 +1,1 @@
-sudo docker build --no-cache -t rest_service .
+sudo docker build --no-cache -t restservice .
