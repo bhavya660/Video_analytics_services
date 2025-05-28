@@ -79,6 +79,427 @@ std::string RestService::handleStartStream(const Json::Value& request) {
     Json::Value responseData;
     responseData["stream_id"] = streamId;
     responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetResolutionFps(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Resolution for stream id : ", streamId, " is 1920x1080 at 30fps");
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleSetResolutionFps(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetStreamStatus(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleSetBitrate(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetBitrate(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleSetEncoder(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetEncoder(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleSetFlip(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetFlip(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleSetRotate(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetRotate(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleSetCrop(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetCrop(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleUpgradeFromRemote(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleUpgradeFromLocal(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleStartRecording(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleStopRecording(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetRecordings(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleSetStaticIP(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleSetDynamicIP(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetNetworkDetails(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleGetSystemInfo(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleAddUserAccount(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleDeleteUserAccount(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleModifyUserAccount(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleVerifyUserAccount(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleStartInferencing(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
+    return createJsonResponse(true, "Stream started successfully", responseData);
+}
+
+std::string RestService::handleStopInferencing(const Json::Value& request) {
+    if (!request.isMember("stream_id") || !request["stream_id"].isString()) {
+        LOG_ERROR("Invalid request: missing or invalid stream_id");
+        return createJsonResponse(false, "Invalid request: stream_id required");
+    }
+
+    std::string streamId = request["stream_id"].asString();
+    LOG_INFO("Starting stream with ID: ", streamId);
+    Json::Value responseData;
+    responseData["stream_id"] = streamId;
+    responseData["status"] = "started";
+    responseData["function"] = __func__;
     return createJsonResponse(true, "Stream started successfully", responseData);
 }
 
@@ -93,5 +514,6 @@ std::string RestService::handleStopStream(const Json::Value& request) {
     Json::Value responseData;
     responseData["stream_id"] = streamId;
     responseData["status"] = "stopped";
+    responseData["function"] = __func__;
     return createJsonResponse(true, "Stream stopped successfully", responseData);
 }
